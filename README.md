@@ -1,7 +1,7 @@
 # ICP2017F-Final
 Final project for COE 301
 
-## **Project Members:**
+#### **Project Members:**
 Nicholas Aufiero
 Simon Volovnik
 Alex Witt
