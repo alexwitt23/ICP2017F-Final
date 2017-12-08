@@ -1,4 +1,3 @@
-```matlab
 close all;
 load('cells.mat');
 
@@ -105,6 +104,7 @@ for t = 1:7
     end
 
     filename = sprintf(['imageSubPlot at t = ',num2str(t),'.png']);
-    saveas(gcf,filename); % save the figure
+    fname = 'C:\Users\alexw\Git\ICP2017F-Final\results';
+    saveas(gca, fullfile(fname, filename),'jpeg');
+    % save the figure
 end 
-```

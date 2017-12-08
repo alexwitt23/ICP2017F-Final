@@ -1,4 +1,3 @@
-```matlab
 function totalSum = getLognormalProb(x0)
     load('cells.mat');
     sumofASlice = zeros(1,16);
@@ -23,5 +22,5 @@ function totalSum = getLognormalProb(x0)
  end
    
     totalSum = -(sum(probArray));
-end        
-```
+end
+        

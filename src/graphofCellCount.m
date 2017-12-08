@@ -1,4 +1,3 @@
-```matlab
 load cells.mat
 
 binary = cells;
@@ -52,10 +51,13 @@ e.LineWidth = 4;
 %gompertzianFit(@getLognormalProb,[10,0.1,1],[0:.1:25])
 
 yticks([0 2e+07 4e+07 6e+07 8e+07 10e+07 12e+07 14e+07 16e+07]);
-legend('Experimental Data','Location','northwest')
+legend('Experimental Data','Error','Gompertzian Fit','Location','northwest')
 title('Gompertzian Fit to Rat Brain Tumor Growth');
 xlabel('Time [Days]');
 ylabel('Tumor Cell Count');
 
-savefig('dataplot.fig');
-```
+filename = sprintf(['ExperimentalDataPlot.png']);
+fname = 'C:\Users\alexw\Git\ICP2017F-Final\results';
+saveas(gca, fullfile(fname, filename),'jpeg');
+
+
