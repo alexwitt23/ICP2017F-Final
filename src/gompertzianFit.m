@@ -1,8 +1,8 @@
 function parameters = gompertzianFit(func,x0,t)
     parameters = fminsearch(func,x0);
-    lambda = x0(1);
-    mu = x0(2);
-    sigma = x0(3);
+    lambda = parameters(1);
+    mu = parameters(2);
+    sigma = parameters(3);
     disp(['lambda: ',num2str(parameters(1)),' , ','c: ',num2str(parameters(2)),' , ','sigma: ',num2str(parameters(3))]);
     output = 100000*exp(parameters(1)*(1-exp(-(parameters(2).*t))));
     plot(t,output,'linewidth',4,'color','red');
