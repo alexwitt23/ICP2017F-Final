@@ -14,11 +14,12 @@ function parameters = gompertzianFit(func,x0,t)
                      'fontsize',13 ...
                     );
     title('Gompertzian Fit to Rat''s Brain Tumor Growth');
+    legend('Experimental Data','Error','Gompertzian Fit','Location','northwest')
     filename = sprintf(['gompertzianFit.png']);
     fname = 'C:\Users\alexw\Git\ICP2017F-Final\results';
     saveas(gca, fullfile(fname, filename),'jpeg');
     
-    save('C:\Users\alexw\Git\ICP2017F-Final\results','lambda','mu','sigma')
+    save('C:\Users\alexw\Git\ICP2017F-Final\results\parameters', 'lambda', 'mu','sigma')
 end
 %call like this:
 %gompertzianFit(@getLognormalProb,[10,0.1,1],[0:.1:25])
