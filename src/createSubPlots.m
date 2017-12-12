@@ -1,5 +1,5 @@
 close all;
-load('cells.mat');
+load ../data/cells.mat;
 
 nrow = round(sqrt(length(cells(1,1,:,1)))); % number of subplots to be created in the y direction
 ncol = nrow; % number of subplots to be created in the x direction
@@ -104,7 +104,6 @@ for t = 1:7
     end
 
     filename = sprintf(['imageSubPlot at t = ',num2str(t),'.png']);
-    fname = 'C:\Users\alexw\Git\ICP2017F-Final\results';
-    saveas(gca, fullfile(fname, filename),'jpeg');
-    % save the figure
+    flocation = '../results';
+    saveas(gca, fullfile(flocation, filename),'jpeg');
 end 

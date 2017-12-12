@@ -1,5 +1,5 @@
 function totalSum = getLognormalProb(x0)
-    load('cells.mat');
+    load ../data/cells.mat;
     sumofASlice = zeros(1,16);
     CellCount = zeros(1,7);
     for t = 1:7

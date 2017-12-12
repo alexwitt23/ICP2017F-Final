@@ -1,5 +1,3 @@
-load cells.mat
-
 binary = cells;
 binary(binary ~= 0) = 1;
 
@@ -57,7 +55,7 @@ xlabel('Time [Days]');
 ylabel('Tumor Cell Count');
 
 filename = sprintf(['ExperimentalDataPlot.png']);
-fname = 'C:\Users\alexw\Git\ICP2017F-Final\results';
-saveas(gca, fullfile(fname, filename),'jpeg');
+flocation = '..\results';
+saveas(gca, fullfile(flocation, filename),'jpeg');
 
 
